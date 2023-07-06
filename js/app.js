@@ -1,0 +1,4 @@
+
+    $('#slickSlider').slick({
+        arrows: false,
+    });

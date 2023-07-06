@@ -1,0 +1,86 @@
+/* COMMON CSS STARTS HERE */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    --bgcolor: #334155;
+}
+/* COMMON CSS ENDS HERE */
+
+/* MAIN PROJECT STARTS HERE */
+body {
+    position: relative;
+}
+#slickSlider {
+    background-color: var(--bgcolor);
+    height: 100vh;
+    position: relative;
+}
+#slickSlider .slider {
+    height: 100%;
+}
+#slickSlider .slider .slider_cnt {
+    position: relative;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+#slickSlider .slider .slider_cnt h2.front,
+#slickSlider .slider .slider_cnt h2.back {
+    font-size: 180px;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    color: white;
+    font-family: arial;
+    font-weight: 800;
+    transform: translateY(250%);
+    opacity: 0;
+    visibility: hidden;
+    transition: 1s ease;
+}
+#slickSlider .slider.slick-active .slider_cnt h2 {
+    transform: translateY(50%);
+    opacity: 1;
+    visibility: visible;
+}
+#slickSlider .slider .slider_cnt h2.front {
+    color: transparent;
+    -webkit-text-stroke: 3px white;
+    z-index: 3;
+}
+#slickSlider .slider .slider_cnt h2.back {
+    z-index: 1;
+}
+#slickSlider .slider .slider_cnt .shoeImage {
+    width: 550px;
+    display: block;
+    margin: auto;
+    z-index: 1;
+    position: relative;
+    transform: translateY(-100%);
+    opacity: 0;
+    visibility: hidden;
+    transition: 1s ease;
+}
+#slickSlider .slider.slick-active .shoeImage {
+    transform: translateX(0%);
+    opacity: 1;
+    visibility: visible;
+}
+#slickSlider .slider .slider_cnt .shoeShadow {
+    display: block;
+    margin: auto;
+    transform: translateX(-100%);
+    opacity: 0;
+    visibility: hidden;
+    transition: 1s ease;
+    transition-delay: 0;
+}
+#slickSlider .slider.slick-active .shoeShadow {
+    transform: translateX(0);
+    opacity: 1;
+    visibility: visible;
+}
+/* MAIN PROJECT ENDS HERE */
